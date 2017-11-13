@@ -17,3 +17,21 @@ ext:
 ```
 
 When rendering HTML pages Grow will minify the resulting html.
+
+### Options
+
+The configuration can also be used with the options for (`htmlmin`)[https://htmlmin.readthedocs.io/en/latest/reference.html#htmlmin.minify].
+
+For example:
+
+```
+ext:
+- extensions.html-min.HtmlMinExtension:
+    options:
+      remove_comments: true
+      reduce_boolean_attributes: false
+```
+
+## Experimental
+
+Currently this extension uses the experimental features of grow to work. This notice will removed once it is available for general usage.
