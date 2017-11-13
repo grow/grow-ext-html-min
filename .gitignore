@@ -1,0 +1,6 @@
+**.pyc
+example/.depcache.json
+example/build/
+example/extensions/
+example/env/
+lib
