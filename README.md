@@ -20,7 +20,7 @@ When rendering HTML pages Grow will minify the resulting html.
 
 ### Options
 
-The configuration can also be used with the options for (`htmlmin`)[https://htmlmin.readthedocs.io/en/latest/reference.html#htmlmin.minify].
+The configuration can also be used with the options for [`htmlmin`](https://htmlmin.readthedocs.io/en/latest/reference.html#htmlmin.minify).
 
 For example:
 
