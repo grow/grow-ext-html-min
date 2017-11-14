@@ -1,5 +1,6 @@
 **.pyc
 example/.depcache.json
+example/.grow/
 example/build/
 example/extensions/
 example/env/
