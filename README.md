@@ -13,7 +13,7 @@ Simple extension for minifying html after Grow renders a page.
 
 ```
 ext:
-- extensions.html-min.HtmlMinExtension
+- extensions.html_min.HtmlMinExtension
 ```
 
 When rendering HTML pages Grow will minify the resulting html.
@@ -26,7 +26,7 @@ For example:
 
 ```
 ext:
-- extensions.html-min.HtmlMinExtension:
+- extensions.html_min.HtmlMinExtension:
     options:
       remove_comments: true
       reduce_boolean_attributes: false
