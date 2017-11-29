@@ -8,7 +8,7 @@ from grow.extensions import hooks
 class HtmlMinPostRenderHook(hooks.BasePostRenderHook):
     """Handle the pre-render hook."""
 
-    def trigger(self, previous_result, doc, raw_content):
+    def trigger(self, previous_result, doc, raw_content, *_args, **_kwargs):
         """Execute pre-render modification."""
         if not doc.view.endswith('.html'):
             return previous_result
