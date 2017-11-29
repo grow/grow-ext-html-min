@@ -3,6 +3,7 @@
 import htmlmin
 from grow import extensions
 from grow.extensions import hooks
+from grow.pods import documents
 
 
 class HtmlMinPostRenderHook(hooks.BasePostRenderHook):
@@ -10,7 +11,7 @@ class HtmlMinPostRenderHook(hooks.BasePostRenderHook):
 
     def trigger(self, previous_result, doc, raw_content, *_args, **_kwargs):
         """Execute pre-render modification."""
-        if not doc.view.endswith('.html'):
+        if not isinstance(doc, documents.Document) or not doc.view.endswith('.html'):
             return previous_result
         content = previous_result if previous_result else raw_content
         return htmlmin.minify(content, **self.extension.config.get('options', {}))
