@@ -35,3 +35,5 @@ ext:
 ## Experimental
 
 Currently this extension uses the experimental features of grow to work. This notice will removed once it is available for general usage.
+
+Use with the `--re-route` flag to be able to use the extension. (ex: `grow build --re-route`)
