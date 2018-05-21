@@ -32,8 +32,6 @@ ext:
       reduce_boolean_attributes: false
 ```
 
-## Experimental
+## Grow Support
 
-Currently this extension uses the experimental features of grow to work. This notice will removed once it is available for general usage.
-
-Use with the `--re-route` flag to be able to use the extension. (ex: `grow build --re-route`)
+This extension requires the new Grow routing to be used. If you are using the old routing (ex: `grow build --old-routing`) this extension will not run.
