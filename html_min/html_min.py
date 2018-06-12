@@ -6,11 +6,11 @@ from grow.extensions import hooks
 from grow.documents import document
 
 
-class HtmlMinPostRenderHook(hooks.BasePostRenderHook):
-    """Handle the pre-render hook."""
+class HtmlMinPostRenderHook(hooks.PostRenderHook):
+    """Handle the post-render hook."""
 
     def trigger(self, previous_result, doc, raw_content, *_args, **_kwargs):
-        """Execute pre-render modification."""
+        """Execute post-render modification."""
         if not isinstance(doc, document.Document) or not doc.view.endswith('.html'):
             return previous_result
         content = previous_result if previous_result else raw_content
@@ -24,7 +24,3 @@ class HtmlMinExtension(extensions.BaseExtension):
     def available_hooks(self):
         """Returns the available hook classes."""
         return [HtmlMinPostRenderHook]
-
-    def post_render_hook(self):
-        """Hook handler for pre render."""
-        return HtmlMinPostRenderHook(self)
