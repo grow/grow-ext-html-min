@@ -31,7 +31,3 @@ ext:
       remove_comments: true
       reduce_boolean_attributes: false
 ```
-
-## Grow Support
-
-This extension requires the new Grow routing to be used. If you are using the old routing (ex: `grow build --old-routing`) this extension will not run.
