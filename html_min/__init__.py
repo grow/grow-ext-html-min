@@ -1,1 +1,1 @@
-from html_min import *
+from . html_min import *
