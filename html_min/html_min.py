@@ -9,6 +9,10 @@ from grow.documents import document
 class HtmlMinPostRenderHook(hooks.PostRenderHook):
     """Handle the post-render hook."""
 
+    def should_trigger(self, previous_result, *_args, **_kwargs):
+        """Determine if the hook should trigger."""
+        return self.extension.config.get('enabled', True)
+
     def trigger(self, previous_result, doc, raw_content, *_args, **_kwargs):
         """Execute post-render modification."""
         if not isinstance(doc, document.Document) or not doc.view.endswith('.html'):

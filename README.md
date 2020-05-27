@@ -18,6 +18,16 @@ ext:
 
 When rendering HTML pages Grow will minify the resulting html.
 
+### Disable per environment
+
+To disable, set the `enabled` config to `False`.
+
+```
+ext:
+- extensions.html_min.HtmlMinExtension:
+    enabled@env.staging: False
+```
+
 ### Options
 
 The configuration can also be used with the options for [`htmlmin`](https://htmlmin.readthedocs.io/en/latest/reference.html#htmlmin.minify).
