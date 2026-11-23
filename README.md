@@ -1,43 +1,13 @@
-# grow-ext-html-min
+# grow-ext-html-min (Moved)
 
-Simple extension for minifying html after Grow renders a page.
-
-## Usage
-
-### Initial setup
-
-1. Create an `extensions.txt` file within your pod.
-1. Add to the file: `git+git://github.com/grow/grow-ext-html-min`
-1. Run `grow install`.
-1. Add the following section to `podspec.yaml`:
-
-```
-ext:
-- extensions.html_min.HtmlMinExtension
-```
-
-When rendering HTML pages Grow will minify the resulting html.
-
-### Disable per environment
-
-To disable, set the `enabled` config to `False`.
-
-```
-ext:
-- extensions.html_min.HtmlMinExtension:
-    enabled@env.staging: False
-```
-
-### Options
-
-The configuration can also be used with the options for [`htmlmin`](https://htmlmin.readthedocs.io/en/latest/reference.html#htmlmin.minify).
-
-For example:
-
-```
-ext:
-- extensions.html_min.HtmlMinExtension:
-    options:
-      remove_comments: true
-      reduce_boolean_attributes: false
-```
+> **This repository has been retired and archived.**
+>
+> `grow-ext-html-min` has moved into the Grow monorepo at
+> [github.com/grow/grow/tree/main/extensions/html-min](https://github.com/grow/grow/tree/main/extensions/html-min),
+> including Python 3.10+ / Jinja2 3.x modernization, security fixes, and zero extra third-party dependencies.
+>
+> Update your `extensions.txt` to:
+>
+> ```text
+> git+https://github.com/grow/grow.git#subdirectory=extensions/html-min
+> ```
